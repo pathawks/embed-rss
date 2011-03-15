@@ -1,5 +1,5 @@
 === DirtySuds - Embed RSS ===
-Contributors: pathawks
+Contributors: dirtysuds, pathawks
 Donate link: http://www.pathawks.com/p/wordpress-plugins.html
 Tags: plugins, wordpress, embed, eombed, rss
 Requires at least: 2.7
@@ -17,7 +17,7 @@ The url must end with `.rss`
 == Installation ==
 
 1. Upload `dirtysuds-embed-rss` to the `/wp-content/plugins/` directory
-2. Activate **DirtySuds - Embed PDF** through the 'Plugins' menu in WordPress
+2. Activate **DirtySuds - Embed RSS** through the 'Plugins' menu in WordPress
 3. That's it. Now when you embed an RSS feed using the Wordpress `[embed]` shortcode, the plugin will embed the feed
 
 
