@@ -3,7 +3,7 @@ Contributors: pathawks,dirtysuds
 Donate link: https://github.com/pathawks/embed-rss
 Tags: plugins, wordpress, embed, eombed, rss
 Requires at least: 2.7
-Tested up to: 3.1
+Tested up to: 3.9.1
 Stable tag: 0.98
 
 Adds pseudo oembed support for RSS feeds
