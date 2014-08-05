@@ -1,16 +1,14 @@
 <?php
 /*
-Plugin Name: DirtySuds - Embed RSS
-Plugin URI: http://dirtysuds.com
+Plugin Name: Embed RSS
+Plugin URI: https://github.com/pathawks/embed-rss
 Description: Embed a RSS feed
 Author: Pat Hawks
+Author URI: http://pathawks.com
+License: GPL2
 Version: 1.00
-Author URI: http://www.pathawks.com
 
-Updates:
-1.00 20110224 - First Version
-
-  Copyright 2011 Pat Hawks  (email : pat@pathawks.com)
+  Copyright 2014 Pat Hawks  (email : pat@pathawks.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,16 +30,16 @@ function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
 	include_once(ABSPATH . WPINC . '/feed.php');
 	// Get a SimplePie feed object from the specified feed source.
 	$rss = fetch_feed($matches[0]);
-	if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
-	    // Figure out how many total items there are, but limit it to 4. 
-	    $maxitems = $rss->get_item_quantity(4); 
-	
+	if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly
+	    // Figure out how many total items there are, but limit it to 4.
+	    $maxitems = $rss->get_item_quantity(4);
+
 	    // Build an array of all the items, starting with element 0 (first element).
 	    $rss_items = $rss->get_items(0, $maxitems);
 	else:
 		return "error";
 	endif;
-	
+
 	$embed = '<ul>';
 	if ($maxitems == 0)
 		$embed .= '<li>No items.</li>';
@@ -52,7 +50,7 @@ function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
 		    $embed .= $item->get_title().'</a></li>';
 		endforeach;
 	$embed .= '</ul>';
-	
+
 	return apply_filters( 'embed_rss', $embed, $matches, $attr, $url, $rawattr  );
 }
 
