@@ -55,7 +55,6 @@ function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
 	return apply_filters( 'embed_rss', $embed, $matches, $attr, $url, $rawattr  );
 }
 
-
 add_filter('plugin_row_meta', 'dirtysuds_embed_rss_rate',10,2);
 function dirtysuds_embed_rss_rate($links,$file) {
 		if (plugin_basename(__FILE__) == $file) {

@@ -6,7 +6,7 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 0.98
+Stable tag: 1.0.0
 
 Adds pseudo oembed support for RSS feeds
 
