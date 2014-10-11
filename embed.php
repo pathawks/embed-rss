@@ -7,7 +7,7 @@ Author: Pat Hawks
 Author URI: http://pathawks.com
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.00
+Version: 1.01
 
   Copyright 2014 Pat Hawks  (email : pat@pathawks.com)
 
@@ -28,6 +28,10 @@ Version: 1.00
 
 wp_embed_register_handler( 'rss', '#(^http.+((\.|=)(rss|atom|xml)|\/feed\/)$)#i', 'wp_embed_handler_rss', 20 );
 function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
+
+	$embed = get_transient( $matches[0] );
+	if( $embed ) return apply_filters( 'embed_rss', $embed, $matches, $attr, $url, $rawattr  );
+
 	include_once(ABSPATH . WPINC . '/feed.php');
 	// Get a SimplePie feed object from the specified feed source.
 	$rss = fetch_feed($matches[0]);
@@ -51,6 +55,8 @@ function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
 		    $embed .= $item->get_title().'</a></li>';
 		endforeach;
 	$embed .= '</ul>';
+
+	set_transient( $matches[0], $embed, 5 * MINUTE_IN_SECONDS );
 
 	return apply_filters( 'embed_rss', $embed, $matches, $attr, $url, $rawattr  );
 }

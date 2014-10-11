@@ -4,9 +4,9 @@ Donate link: https://github.com/pathawks/embed-rss
 Tags: plugins, wordpress, embed, eombed, rss
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 2.7
+Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.0.0
+Stable tag: 1.01
 
 Adds pseudo oembed support for RSS feeds
 
@@ -32,6 +32,9 @@ postlist@pathawks.com
 
 
 == Changelog ==
+
+= 1.01 =
+* Make use of transients
 
 = 0.98 =
 * First version
