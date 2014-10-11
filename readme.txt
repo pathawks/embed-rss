@@ -6,7 +6,7 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.01
+Stable tag: 1.02
 
 Adds pseudo oembed support for RSS feeds
 
@@ -31,6 +31,9 @@ Please open a pull request on [Github](https://github.com/pathawks/embed-rss)
 
 
 == Changelog ==
+
+= 1.02 =
+* Bugfix
 
 = 1.01 =
 * Make use of transients
