@@ -27,8 +27,7 @@ The url must end with `.rss`
 
 = I have an idea for a great way to improve this plugin =
 
-Great! I'd love to hear from you.
-postlist@pathawks.com
+Please open a pull request on [Github](https://github.com/pathawks/embed-rss)
 
 
 == Changelog ==
