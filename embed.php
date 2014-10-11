@@ -29,7 +29,7 @@ Version: 1.01
 wp_embed_register_handler( 'rss', '#(^http.+((\.|=)(rss|atom|xml)|\/feed\/)$)#i', 'wp_embed_handler_rss', 20 );
 function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
 
-	$embed = get_transient( $matches[0] );
+	$embed = get_transient( 'dirtysuds_oembed_rss'.$matches[0] );
 	if( $embed ) return apply_filters( 'embed_rss', $embed, $matches, $attr, $url, $rawattr  );
 
 	include_once(ABSPATH . WPINC . '/feed.php');
@@ -56,7 +56,7 @@ function wp_embed_handler_rss( $matches, $attr, $url, $rawattr ) {
 		endforeach;
 	$embed .= '</ul>';
 
-	set_transient( $matches[0], $embed, 5 * MINUTE_IN_SECONDS );
+	set_transient( 'dirtysuds_oembed_rss'.$matches[0], $embed, 5 * MINUTE_IN_SECONDS );
 
 	return apply_filters( 'embed_rss', $embed, $matches, $attr, $url, $rawattr  );
 }
