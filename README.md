@@ -1,10 +1,10 @@
 # Embed RSS
 
 [![Plugin Version](https://img.shields.io/wordpress/plugin/v/dirtysuds-embed-rss.svg)](https://wordpress.org/plugins/dirtysuds-embed-rss/)
+[![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://wordpress.org/about/license/)
 [![Tested Version](https://img.shields.io/wordpress/v/dirtysuds-embed-rss.svg)](https://wordpress.org/plugins/dirtysuds-embed-rss/)
 [![Rating](https://img.shields.io/wordpress/plugin/r/dirtysuds-embed-rss.svg)](https://wordpress.org/support/view/plugin-reviews/dirtysuds-embed-rss)
 [![Downloads](https://img.shields.io/wordpress/plugin/dt/dirtysuds-embed-rss.svg)](https://wordpress.org/plugins/dirtysuds-embed-rss/)
-[![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://wordpress.org/about/license/)
 
 ## Adds pseudo oembed support for RSS feeds
 
